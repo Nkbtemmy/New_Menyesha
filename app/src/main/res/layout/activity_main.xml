@@ -5,50 +5,50 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-android:background="@drawable/muhabura"
+        android:background="@drawable/convertion"
         tools:context=".MainActivity">
 
     <Button
         android:id="@+id/regist"
-        android:layout_width="wrap_content"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="36dp"
         android:layout_marginBottom="40dp"
         android:text="Register Vistor"
+        android:textSize="19sp"
         android:textStyle="bold"
-        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.473" />
 
     <Button
         android:id="@+id/view"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="View Vistors"
+        android:textSize="21sp"
         android:textStyle="bold"
-        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toEndOf="@+id/regist"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.48" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:textStyle="bold"
+        android:layout_marginTop="176dp"
+        android:gravity="center"
         android:text="Welcome to Menyesha Platform Application"
-        android:textColor="@color/white"
-        android:textSize="50sp"
         android:textAlignment="center"
-        android:layout_marginLeft="12sp"
-        android:layout_marginRight="12sp"
+        android:textColor="@color/yellow"
+        android:textSize="55sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

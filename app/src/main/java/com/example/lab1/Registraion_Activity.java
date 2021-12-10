@@ -72,9 +72,9 @@ public class Registraion_Activity extends AppCompatActivity {
                        if (lname.getText().length() < 1)
                            lname.setError("Last name is required");
                        if (regno.getText().length() < 1)
-                           regno.setError("Reg number is required");
+                           regno.setError("Telephone number is required");
                        if (departement.getText().length() < 1)
-                           departement.setError("Department name is required");
+                           departement.setError("Visitor's Location is required");
                    }
                } catch (NumberFormatException e) {
                    e.printStackTrace();
@@ -96,7 +96,7 @@ public class Registraion_Activity extends AppCompatActivity {
     }
     public void SendStudentData(String fname, String lname, String regno, String departement){
         RequestQueue requestQueue= Volley.newRequestQueue(this);
-        String url="http://172.31.122.66//PHP-folder/Registration.php";
+        String url="http://192.168.5.95//PHP-folder/Registration.php";
         StringRequest request=new StringRequest(Request.Method.POST,url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

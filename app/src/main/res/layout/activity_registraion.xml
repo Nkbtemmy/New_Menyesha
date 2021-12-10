@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/muhabura"
+    android:background="@color/green"
     tools:context=".Registraion_Activity">
 
 
@@ -15,7 +15,7 @@
         android:layout_marginTop="32dp"
         android:background="@color/white"
         android:ems="10"
-        android:hint="Departement"
+        android:hint="Location"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
@@ -43,8 +43,7 @@
         android:layout_marginTop="36dp"
         android:background="@color/white"
         android:ems="10"
-
-        android:hint="Reg Number"
+        android:hint="TelePhone"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
@@ -57,6 +56,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="100dp"
         android:background="@color/white"
+        android:textColor="@color/black"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
@@ -70,10 +70,25 @@
         android:layout_width="259dp"
         android:layout_height="62dp"
         android:layout_marginTop="32dp"
-        android:text="Submit"
+        android:text="Save"
+        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/departement"
         app:layout_constraintVertical_bias="0.092" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow"
+        android:textStyle="bold"
+        android:textSize="45dp"
+        android:text="Register Vistor"
+        app:layout_constraintBottom_toTopOf="@+id/fname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

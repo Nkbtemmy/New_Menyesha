@@ -76,7 +76,7 @@ public class Student_List extends AppCompatActivity {
     public void loadList(){
        // contacts=new ArrayList<Contact>();
         RequestQueue requestQueue= Volley.newRequestQueue(this);
-        String url="http://s172.31.122.66//PHP-folder/List_Students.php";
+        String url="http://192.168.5.95//PHP-folder/List_Students.php";
         ArrayList<Student_model> students=new ArrayList<>();
         StringRequest request=new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {

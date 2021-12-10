@@ -68,7 +68,7 @@ public class operations_student extends SQLiteOpenHelper {
         values.put(Lastname,student_model.getLname());
         values.put(Department,student_model.getDepartement());
         db.update(TABLE_NAME, values, "RegNo= ?", new String[]{""+student_model.getRegno()});
-        Toast.makeText(context, "student is updated", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Visitor's info is updated", Toast.LENGTH_SHORT).show();
     }
     public void addStudent(Student_model student_model) {
 
@@ -94,7 +94,7 @@ public class operations_student extends SQLiteOpenHelper {
               values.put(Department,student_model.getDepartement());
 
               db.insert(TABLE_NAME, null, values);
-              Toast.makeText(context, "student is added", Toast.LENGTH_SHORT).show();
+              Toast.makeText(context, "Vistor is added", Toast.LENGTH_SHORT).show();
 
       }
 catch (Exception e){
@@ -107,7 +107,7 @@ catch (Exception e){
     public void deleteStudent(String regno_toDelete){
         SQLiteDatabase db=this.getWritableDatabase();
         db.delete(TABLE_NAME,"RegNo="+regno_toDelete ,null);
-        Toast.makeText(context, "Student with RegNo: "+regno_toDelete+" is deleted", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Vistor with Phone: "+regno_toDelete+" is deleted", Toast.LENGTH_SHORT).show();
         db.close();
     }
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
