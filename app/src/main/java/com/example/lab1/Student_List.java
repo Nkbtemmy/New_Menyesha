@@ -40,7 +40,7 @@ public class Student_List extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_list);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("List of students");
+        getSupportActionBar().setTitle("List of Vistors");
        // student_model=(Student_model) getIntent().getSerializableExtra("Student");
         dbHandler=new operations_student(this);
         student_models=dbHandler.FetchStudents();

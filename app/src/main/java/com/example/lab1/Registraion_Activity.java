@@ -38,7 +38,7 @@ public class Registraion_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registraion);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Register Student");
+        getSupportActionBar().setTitle("Register Vistor");
         fname=(EditText) findViewById(R.id.fname);
         lname=(EditText) findViewById(R.id.lname);
         regno=(EditText) findViewById(R.id.regno);
