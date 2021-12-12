@@ -76,7 +76,7 @@ public class Student_List extends AppCompatActivity {
     public void loadList(){
        // contacts=new ArrayList<Contact>();
         RequestQueue requestQueue= Volley.newRequestQueue(this);
-        String url="http://192.168.5.95//PHP-folder/List_Students.php";
+        String url="http://172.31.109.183//PHP-folder/List_Students.php";
         ArrayList<Student_model> students=new ArrayList<>();
         StringRequest request=new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
@@ -134,8 +134,16 @@ public class Student_List extends AppCompatActivity {
                                     Log.d("Fname: ",student_model.getFname());
                                     Students.add(student_model);
                                 }
+                            for(Student_model student_model1:students)
+                                Log.d("st1:",student_model1.toString());
 
+                            studentRecycler=(RecyclerView) findViewById(R.id.St_list);
+                            studentAdapter=new StudentAdapter(Students,Student_List.this);
+                            studentRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                            studentRecycler.setVerticalScrollBarEnabled(true);
+                            studentRecycler.setAdapter(studentAdapter);
                         }
+
                         catch(Exception e){
 
                         }
@@ -144,7 +152,7 @@ public class Student_List extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("Error",error.getMessage());
+                Log.d("Error",error.toString());
             }
         }){
             @Override
@@ -154,14 +162,7 @@ public class Student_List extends AppCompatActivity {
         };
 
         requestQueue.add(request);
-        for(Student_model student_model1:students)
-            Log.d("st1:",student_model1.toString());
 
-        studentRecycler=(RecyclerView) findViewById(R.id.St_list);
-        studentAdapter=new StudentAdapter(Students,Student_List.this);
-        studentRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        studentRecycler.setVerticalScrollBarEnabled(true);
-        studentRecycler.setAdapter(studentAdapter);
     }
 
 }
